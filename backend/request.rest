@@ -1,0 +1,146 @@
+// Create a User Admin
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@admin.com",
+    "password": "password",
+    "confPassword": "password",
+    "role": "admin"
+}
+
+###
+// Create a User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Test 1",
+    "email": "test@test1.com",
+    "password": "password",
+    "confPassword": "password",
+    "role": "user"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single User for token admin
+GET http://localhost:5000/users/acaa12b7-1d85-4497-a310-42e1997baa2b
+
+###
+// Get Single User for token user
+GET http://localhost:5000/users/76016471-f6f6-4be2-a4cc-aae880048442
+
+###
+// Update User
+PATCH http://localhost:5000/users/8583f914-32dc-4604-9a4a-0d985c90f0a7
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@admin.com",
+    "password": "password",
+    "confPassword": "password",
+    "role": "admin"
+}
+
+###
+// Update User 2
+PATCH http://localhost:5000/users/76016471-f6f6-4be2-a4cc-aae880048442
+Content-Type: application/json
+
+{
+    "name": "Test edit",
+    "email": "test@test1.com",
+    "password": "password",
+    "confPassword": "password",
+    "role": "user"
+}
+
+###
+// Deleted USER
+DELETE http://localhost:5000/users/fa966805-20e6-42b9-9f1d-60a458570167
+
+###
+// User Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@admin.com",
+    "password": "password"
+}
+
+###
+// User Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "test@test1.com",
+    "password": "password"
+}
+
+###
+// Get detail login User
+GET http://localhost:5000/me
+
+###
+// User Logout
+DELETE  http://localhost:5000/logout
+
+###
+// Get All Users
+GET http://localhost:5000/products
+
+###
+// Get Single Users
+GET http://localhost:5000/products/uuid
+
+###
+// Create Product  1
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Produk 1",
+    "price": 5000
+}
+
+###
+// Create Product 2
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Produk 2",
+    "price": 1000
+}
+
+###
+// Create Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Produk 2",
+    "price": 10000,
+}
+
+###
+// Update Product
+PATCH http://localhost:5000/products/uuid
+Content-Type: application/json
+
+{
+    "name": "Produk 2 edit",
+    "price": 10000,
+}
+
+###
+// Deleted Product
+DELETE http://localhost:5000/products/uuid
